@@ -16,6 +16,9 @@ if (UNIX)
    if ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "Intel")
       set( CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -fltconsistency -fp_port" )
    endif ()
+   if ("${CMAKE_C_COMPILER_ID}" STREQUAL "IntelLLVM")
+      set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-implicit-function-declaration" )
+   endif ()
 endif ()
 
 #
