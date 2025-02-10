@@ -19,6 +19,9 @@ if (UNIX)
    if ("${CMAKE_C_COMPILER_ID}" STREQUAL "IntelLLVM")
       set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-implicit-function-declaration" )
    endif ()
+   if ("${CMAKE_C_COMPILER_ID}" STREQUAL "GNU")
+      set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-implicit-function-declaration" )
+   endif ()
 endif ()
 
 #
